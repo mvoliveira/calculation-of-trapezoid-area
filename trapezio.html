@@ -1,0 +1,35 @@
+<html>
+<head>
+<title> Formulário de cálculo de área de um triângulo</title>
+</head>
+<script language="JavaScript">
+function calcula(form) {
+
+ var base_menor =  form.base_menor.value;
+ var base_maior = form.base_maior.value;
+ var altura = form.altura.value;
+ console.log(base_menor);
+ console.log(base_maior);
+ console.log(altura);
+ somados = parseInt(base_maior) + parseInt(base_menor);
+ console.log(somados);
+var area = (eval(somados*altura))/2;
+console.log(area);
+form.resultado.value = area;
+}
+
+</script>
+<body>
+<form>
+Base menor:
+<input type="text" name="base_menor" /><p/>
+Base maior:
+<input type="text" name="base_maior" /><p/>
+Altura:
+<input type="text" name="altura" /><p/>
+<input type="button" value="Calcular" onClick="calcula(this.form)" />
+<input type="reset" value="Limpar" /><p/>
+Resultado: <input type="text" name="resultado" />
+</form>
+</body>
+</html>
